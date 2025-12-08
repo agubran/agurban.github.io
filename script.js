@@ -507,76 +507,7 @@ window.addEventListener('scroll', () => {
     });
 }, { passive: true });
 
-// ==================== MOBILE MENU STYLES ==================== //
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 992px) {
-        .nav-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: linear-gradient(135deg, #0a2540 0%, #0d3b5c 100%);
-            flex-direction: column;
-            padding: 100px 30px 30px;
-            gap: 15px;
-            transition: right 0.3s ease;
-            box-shadow: -5px 0 30px rgba(0,0,0,0.3);
-            z-index: 999;
-        }
-        
-        .nav-menu.active {
-            right: 0;
-        }
-        
-        .nav-link {
-            display: block;
-            width: 100%;
-            text-align: right;
-            padding: 15px 20px;
-            border-radius: 10px;
-        }
-        
-        .nav-link:hover,
-        .nav-link.active {
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .nav-link.cta-nav {
-            margin-right: 0;
-            margin-top: 20px;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-        
-        body.menu-open {
-            overflow: hidden;
-        }
-        
-        body.menu-open::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 998;
-        }
-    }
-`;
-document.head.appendChild(style);
+// Mobile menu styles are now defined in styles.css
 
 // ==================== LAZY LOAD IMAGES ==================== //
 if ('IntersectionObserver' in window) {
