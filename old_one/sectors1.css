@@ -1,0 +1,63 @@
+/* ==================== SECTORS SECTION ==================== */
+.section.sectors {
+    background: var(--white);
+    padding-bottom: 40px;
+}
+
+.sectors-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sector-tag {
+    background: var(--light-green);
+    color: var(--primary-green);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 176, 80, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sector-tag:hover {
+    background: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 176, 80, 0.3);
+    border-color: transparent;
+}
+
+.sector-tag i {
+    font-size: 0.9em;
+}
+
+.sector-category-title {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 20px;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    position: relative;
+}
+
+.sector-category-title::before,
+.sector-category-title::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: var(--accent-green);
+    vertical-align: middle;
+    margin: 0 10px;
+    opacity: 0.5;
+}
