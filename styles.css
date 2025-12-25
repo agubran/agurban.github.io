@@ -1,13 +1,13 @@
 /* ==================== CSS VARIABLES ==================== */
 :root {
-    /* Primary Colors - Professional Teal/Green Palette */
-    --primary-dark: #0a2540;
-    --primary: #0d3b5c;
-    --primary-light: #1a5276;
-    --secondary: #16a085;
-    --secondary-light: #1abc9c;
-    --accent: #f39c12;
-    --accent-light: #f5b041;
+    /* Primary Colors - Delta Built Teal Palette */
+    --primary-dark: #0d5f6a;
+    --primary: #1a7a8a;
+    --primary-light: #2d9aaa;
+    --secondary: #6fb43f;
+    --secondary-light: #8cc63f;
+    --accent: #52b4c5;
+    --accent-light: #7fd1e0;
 
     /* Neutral Colors */
     --white: #ffffff;
@@ -15,20 +15,20 @@
     --light-gray: #ecf0f1;
     --gray: #95a5a6;
     --dark-gray: #7f8c8d;
-    --text-dark: #2c3e50;
-    --text-light: #6c757d;
+    --text-dark: #1a5f6a;
+    --text-light: #6c8d8d;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(10, 37, 64, 0.80) 0%, rgba(22, 160, 133, 0.65) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(13, 95, 106, 0.85) 0%, rgba(111, 180, 63, 0.65) 100%);
 
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
-    --shadow-glow: 0 0 30px rgba(22, 160, 133, 0.3);
+    --shadow-glow: 0 0 30px rgba(111, 180, 63, 0.3);
 
     /* Typography */
     --font-primary: 'Cairo', 'Tajawal', sans-serif;
@@ -109,7 +109,7 @@ ul {
     left: 0;
     width: 100%;
     height: 80px;
-    background: rgba(10, 37, 64, 0.85);
+    background: rgba(13, 95, 106, 0.85);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -118,7 +118,7 @@ ul {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 37, 64, 0.98);
+    background: rgba(13, 95, 106, 0.98);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-md);
     height: 70px;
@@ -134,14 +134,18 @@ ul {
 .logo-icon {
     width: 45px;
     height: 45px;
-    background: var(--gradient-secondary);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    color: var(--white);
     transition: var(--transition);
+    overflow: hidden;
+}
+
+.logo-icon .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .logo:hover .logo-icon {
@@ -1622,6 +1626,12 @@ ul {
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .footer-logo i {
